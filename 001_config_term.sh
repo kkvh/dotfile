@@ -33,7 +33,7 @@ sleep 2
 # powerlevel9k
 echo -e "${GREEN}Installing zsh-theme-powerlevel9k...${NC}"
 git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel9k
-sed -i '/^ZSH_THEME=/ s/".*"/"powerlevel9k/powerlevel9k"/' ~/.zshrc
+sed -i '/^ZSH_THEME=/ s/".*"/"powerlevel9k\/powerlevel9k"/' ~/.zshrc
 # sudo pacman -S --noconfirm zsh-theme-powerlevel9k
 # echo 'source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
 
