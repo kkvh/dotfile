@@ -32,8 +32,10 @@ sleep 2
 
 # powerlevel9k
 echo -e "${GREEN}Installing zsh-theme-powerlevel9k...${NC}"
-sudo pacman -S --noconfirm zsh-theme-powerlevel9k
-echo 'source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
+git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel9k
+sed -i '/^ZSH_THEME=/ s/".*"/"powerlevel9k/powerlevel9k"/' ~/.zshrc
+# sudo pacman -S --noconfirm zsh-theme-powerlevel9k
+# echo 'source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
 
 # tmux
 echo -e "${GREEN}Installing tmux...${NC}"
@@ -41,3 +43,30 @@ sudo pacman -S --noconfirm tmux
 echo 'export TERM="xterm-256color"' >> ~/.zshrc
 echo 'set -g default-terminal "screen-256color"' >> ~/.tmux.conf
 echo 'set-window-option -g mode-keys vi' >> ~/.tmux.conf
+
+# fasd
+yay -S fasd
+sed -i '/^)$/i \ \ fasd' ~/.zshrc
+
+# zsh plugins
+sed -i '/^)$/i \ \ colored-man-pages' ~/.zshrc
+sed -i '/^)$/i \ \ virtualenv' ~/.zshrc
+echo 'POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)' >> ~/.zshrc
+sed -i '/^)$/i \ \ docker' ~/.zshrc
+sed -i '/^)$/i \ \ last-working-dir' ~/.zshrc
+sed -i '/^)$/i \ \ vi-mode' ~/.zshrc
+
+# zsh-autosuggestions
+echo -e "${GREEN}Installing zsh-autosuggestions...${NC}"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sed -i '/^)$/i \ \ zsh-autosuggestions' ~/.zshrc
+
+# zsh-syntax-highlighting (must be last plugin!)
+echo -e "${GREEN}Installing zsh-syntax-highlighting...${NC}"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+sed -i '/^)$/i \ \ zsh-syntax-highlighting' ~/.zshrc
+
+# zsh alias
+echo 'alias quit="exit"' >> ~/.zshrc
+echo 'alias cls="clear"' >> ~/.zshrc
+echo 'alias glogb="git bglog"' >> ~/.zshrc
