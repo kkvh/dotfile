@@ -19,7 +19,7 @@ cd fonts
 ./install.sh 
 cd ..
 rm -rf fonts
-echo -e "${GREEN_L}Powerline patched fonts installed. You can now change your font in Preference."
+echo -e "${GREEN_L}Powerline patched fonts installed. You can now change your font in Preference.${NC}"
 echo -e "${GREEN}Installing zsh-theme-powerlevel9k...${NC}"
 sudo pacman -S --noconfirm zsh-theme-powerlevel9k
 echo 'source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
@@ -28,3 +28,5 @@ sudo pacman -S --noconfirm tmux
 echo 'export TERM="xterm-256color"' >> ~/.zshrc
 echo 'set -g default-terminal "screen-256color"' >> ~/.tmux.conf
 echo 'set-window-option -g mode-keys vi' >> ~/.tmux.conf
+echo -e "${GREEN}Installing universal ctags...${NC}"
+yay -S universal-ctags-git
