@@ -30,3 +30,7 @@ echo 'set -g default-terminal "screen-256color"' >> ~/.tmux.conf
 echo 'set-window-option -g mode-keys vi' >> ~/.tmux.conf
 echo -e "${GREEN}Installing universal ctags...${NC}"
 yay -S universal-ctags-git
+echo -e "${GREEN}Installing docker...${NC}"
+sudo pacman -S --noconfirm docker
+sudo usermod -a -G docker $USER
+systemctl enable docker
