@@ -1,8 +1,9 @@
 source ./lib_sh/echos.sh
+source ./lib_sh/requirers.sh
 
 # oh-my-zsh
 run "Installing zsh and oh-my-zsh..."
-sudo pacman -S --noconfirm zsh
+yay_nc zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh -l::g')"
 
 # fonts
@@ -19,18 +20,18 @@ sleep 2
 run "Installing zsh-theme-powerlevel9k..."
 git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel9k
 sed -i '/^ZSH_THEME=/ s/".*"/"powerlevel9k\/powerlevel9k"/' ~/.zshrc
-# sudo pacman -S --noconfirm zsh-theme-powerlevel9k
+# yay_nc zsh-theme-powerlevel9k
 # echo 'source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
 
 # tmux
 run "Installing tmux..."
-sudo pacman -S --noconfirm tmux
+yay_nc tmux
 echo 'export TERM="xterm-256color"' >> ~/.zshrc
 echo 'set -g default-terminal "screen-256color"' >> ~/.tmux.conf
 echo 'set-window-option -g mode-keys vi' >> ~/.tmux.conf
 
 # fasd
-yay -S fasd
+yay_nc fasd
 sed -i '/^)$/i \ \ fasd' ~/.zshrc
 
 # zsh plugins
