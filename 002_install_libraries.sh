@@ -1,19 +1,17 @@
-GREEN='\033[0;32m'
-GREEN_L='\033[1;32m'
-NC='\033[0m'
+source ./lib_sh/echos.sh
 
 # ctags
-echo -e "${GREEN}Installing universal ctags...${NC}"
+run "Installing universal ctags..."
 yay -S universal-ctags-git
 
 # docker
-echo -e "${GREEN}Installing docker...${NC}"
+run "Installing docker..."
 sudo pacman -S --noconfirm docker
 sudo usermod -a -G docker $USER
 systemctl enable docker
 
 # nodejs
-echo -e "${GREEN}Installing nodejs...${NC}"
+run "Installing nodejs..."
 yay -S nvm
 echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
 source /usr/share/nvm/init-nvm.sh
@@ -21,7 +19,7 @@ nvm install node
 sudo pacman -S --noconfirm npm
 
 # golang
-echo -e "${GREEN}Installing go...${NC}"
+run "Installing go..."
 sudo pacman -S --noconfirm go
 mkdir ~/go && mkdir ~/go/src
 echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
