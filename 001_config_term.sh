@@ -1,18 +1,5 @@
 source ./lib_sh/echos.sh
 
-# git config
-run "Setting up git env..."
-git config --global user.email "8171598+kevinhui@users.noreply.github.com"
-git config --global user.name "Kevin Hui"
-
-# yay
-run "Installing yay..."
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
-rm -rf yay/
-
 # oh-my-zsh
 run "Installing zsh and oh-my-zsh..."
 sudo pacman -S --noconfirm zsh
