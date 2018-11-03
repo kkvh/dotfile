@@ -10,7 +10,7 @@ git config --global user.name "Kevin Hui"
 run "Installing yay..."
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg --noconfirm -si
 cd ..
 rm -rf yay/
 
