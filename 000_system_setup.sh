@@ -14,18 +14,18 @@ makepkg --noconfirm -si
 cd ..
 rm -rf yay/
 
-# Xserver
+# Xserver (display server)
 run "Installing Xserver..."
 yay_nc xorg-server xorg-apps xorg-xinit
 yay_nc xf86-video-intel
 
-# i3
+# i3 (window manager)
 run "Installing i3..."
 yay_nc i3-wm i3lock i3status
 echo "exec i3" >> ~/.xinitrc
 yay_nc i3blocks
 
-# lightdm
+# lightdm,lightdm-webkit2-greeter (display manager,greeter)
 run "Installing lightdm..."
 yay_nc lightdm
 yay_nc lightdm-webkit2-greeter
