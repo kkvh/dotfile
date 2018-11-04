@@ -59,4 +59,5 @@ run "Installing NetworkManager..."
 yay_nc networkmanager
 yay_nc network-manager-applet
 sudo systemctl enable NetworkManager.service
-sudo systemctl start NetworkManager.service
+
+info "Installation complete. Please reboot."
