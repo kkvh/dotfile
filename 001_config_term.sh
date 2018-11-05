@@ -35,9 +35,12 @@ yay_nc fasd
 sed -i '/^)$/i \ \ fasd' ~/.zshrc
 
 # zsh plugins
+echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)' >> ~/.zshrc
+echo 'POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status time)' >> ~/.zshrc
+# echo 'POWERLEVEL9K_MODE="nerdfont-complete"' >> ~/.zshrc
+# echo 'POWERLEVEL9K_MODE="awesome-patched"' >> ~/.zshrc
 sed -i '/^)$/i \ \ colored-man-pages' ~/.zshrc
 sed -i '/^)$/i \ \ virtualenv' ~/.zshrc
-echo 'POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)' >> ~/.zshrc
 sed -i '/^)$/i \ \ docker' ~/.zshrc
 sed -i '/^)$/i \ \ last-working-dir' ~/.zshrc
 sed -i '/^)$/i \ \ vi-mode' ~/.zshrc
