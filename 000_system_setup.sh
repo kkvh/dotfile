@@ -42,9 +42,11 @@ yay_nc rofi
 
 # utils
 run "Installing utils..."
-yay_nc chromium conky curl
+yay_nc chromium curl
 yay_nc file-roller firefox
-yay_nc git gnome-terminal
+# yay_nc git gnome-terminal
+yay_nc alacritty
+# yay_nc termite
 yay_nc net-tools numlockx
 yay_nc plank
 yay_nc sysstat
@@ -53,6 +55,12 @@ yay_nc wget
 yay_nc unclutter unrar zip unzip
 
 # sound
+yay_nc alsa-utils
+# amixer sset Master unmute
+# amixer sset Speaker unmute
+# amixer sset Headphone unmute
+# alsamixer
+# speaker-test -c 2
 
 # network
 run "Installing NetworkManager..."
