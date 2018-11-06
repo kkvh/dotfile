@@ -22,7 +22,6 @@ yay_nc xf86-video-intel
 # i3 (window manager)
 run "Installing i3..."
 yay_nc i3-wm i3lock i3status
-echo "exec i3" >> ~/.xinitrc
 yay_nc i3blocks
 
 # lightdm,lightdm-webkit2-greeter (display manager,greeter)
@@ -46,6 +45,7 @@ yay_nc chromium curl
 yay_nc file-roller firefox
 # yay_nc git gnome-terminal
 yay_nc alacritty
+echo "export TERMINAL=alacritty" >> $HOME/.profile
 # yay_nc termite
 yay_nc net-tools numlockx
 yay_nc plank
