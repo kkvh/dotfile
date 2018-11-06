@@ -30,7 +30,7 @@ run "Installing lightdm..."
 yay_nc lightdm
 yay_nc lightdm-webkit2-greeter
 yay_nc lightdm-webkit-theme-aether
-systemctl enable lightdm.service
+sudo systemctl enable lightdm.service
 
 # archey3
 run "Installing archey3..."

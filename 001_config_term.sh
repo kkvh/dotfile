@@ -7,14 +7,20 @@ yay_nc zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh -l::g')"
 
 # fonts
-run "Installing powerline patched fonts..."
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh 
+# Powerline
+# run "Installing powerline patched fonts..."
+# git clone https://github.com/powerline/fonts.git --depth=1
+# cd fonts
+# ./install.sh 
+# cd ..
+# rm -rf fonts
+# info "Powerline patched fonts installed. You can now change your font in Preference."
+# nerd-fonts
+run "Installing Meslo Nerd Font..."
+git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts
+./install.sh Meslo
 cd ..
-rm -rf fonts
-info "Powerline patched fonts installed. You can now change your font in Preference."
-sleep 2
+rm -rf nerd-fonts
 
 # powerlevel9k
 run "Installing zsh-theme-powerlevel9k..."
