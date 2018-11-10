@@ -5,11 +5,21 @@ source ./lib_sh/requirers.sh
 run "Installing universal ctags..."
 yay_nc universal-ctags-git
 
+# cmake
+run "Installing cmake..."
+yay_nc cmake
+
+# gvim
+run "Installing gvim..."
+yay_nc gvim
+git clone https://github.com/kevinhui/.vim.git -b dev ~/.vim
+vim +PlugInstall +qall
+
 # docker
 run "Installing docker..."
 yay_nc docker
 sudo usermod -a -G docker $USER
-systemctl enable docker
+sudo systemctl enable docker
 
 # nodejs
 run "Installing nodejs..."
