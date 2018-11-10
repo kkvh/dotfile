@@ -1,0 +1,9 @@
+! Rofi config file
+rofi.modi: window,run,ssh,drun
+rofi.lines: 12
+rofi.font: Source Sans Pro 12
+rofi.show-icons: true
+rofi.theme: ~/.config/rofi/oxide.rasi
+rofi.display-window: Window
+rofi.display-run: Run
+rofi.display-drun: Search

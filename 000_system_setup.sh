@@ -38,6 +38,7 @@ yay_nc archey3
 # rofi
 run "Installing rofi..."
 yay_nc rofi
+cp -r ./rofi $HOME/.config/
 
 # utils
 run "Installing utils..."
