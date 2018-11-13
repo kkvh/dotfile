@@ -12,7 +12,7 @@ yay_nc cmake
 # gvim
 run "Installing gvim..."
 yay_nc gvim
-git clone https://github.com/kevinhui/.vim.git -b dev ~/.vim
+git clone https://github.com/kkvh/.vim.git -b dev ~/.vim
 vim +PlugInstall +qall
 
 # docker
