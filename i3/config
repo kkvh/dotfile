@@ -293,3 +293,4 @@ bar {
 
 # startup applications
 exec --no-startup-id pulseaudio --start
+exec --no-startup-id feh --bg-fill ~/Backgrounds/road_sunset.jpg

@@ -26,6 +26,8 @@ yay_nc i3blocks
 git clone https://github.com/vivien/i3blocks-contrib.git $HOME/.local/src/i3blocks-contrib
 cp -r ./i3 $HOME/.config/
 cp -r ./i3blocks $HOME/.config/
+mkdir $HOME/Backgrounds
+cp ./road_sunset.jpg $HOME/Backgrounds
 
 # lightdm,lightdm-webkit2-greeter (display manager,greeter)
 run "Installing lightdm..."
@@ -45,10 +47,10 @@ cp -r ./rofi $HOME/.config/
 
 # utils
 run "Installing utils..."
-yay_nc chromium curl
-yay_nc file-roller firefox
-# yay_nc git gnome-terminal
 yay_nc alacritty
+yay_nc chromium curl
+yay_nc feh file-roller firefox
+# yay_nc git gnome-terminal
 # yay_nc termite
 yay_nc net-tools numlockx
 yay_nc plank
