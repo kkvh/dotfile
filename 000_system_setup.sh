@@ -23,7 +23,7 @@ yay_nc xf86-video-intel
 run "Installing i3..."
 yay_nc i3-wm i3lock i3status
 yay_nc i3blocks
-git clone https://github.com/vivien/i3blocks-contrib.git $HOME/.local/src/i3-blocks-contrib
+git clone https://github.com/vivien/i3blocks-contrib.git $HOME/.local/src/i3blocks-contrib
 cp -r ./i3 $HOME/.config/
 cp -r ./i3blocks $HOME/.config/
 
@@ -59,6 +59,7 @@ yay_nc unclutter unrar zip unzip
 
 # sound
 yay_nc alsa-utils
+yay_nc pulseaudio
 # amixer sset Master unmute
 # amixer sset Speaker unmute
 # amixer sset Headphone unmute
