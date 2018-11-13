@@ -3,7 +3,7 @@ source ./lib_sh/requirers.sh
 
 # git config
 run "Setting up git env..."
-git config --global user.email "8171598+kevinhui@users.noreply.github.com"
+git config --global user.email "8171598+kkvh@users.noreply.github.com"
 git config --global user.name "Kevin Hui"
 
 # yay
