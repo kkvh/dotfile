@@ -23,6 +23,9 @@ yay_nc xf86-video-intel
 run "Installing i3..."
 yay_nc i3-wm i3lock i3status
 yay_nc i3blocks
+git clone https://github.com/vivien/i3blocks-contrib.git $HOME/.local/src/i3-blocks-contrib
+cp -r ./i3 $HOME/.config/
+cp -r ./i3blocks $HOME/.config/
 
 # lightdm,lightdm-webkit2-greeter (display manager,greeter)
 run "Installing lightdm..."
@@ -46,7 +49,6 @@ yay_nc chromium curl
 yay_nc file-roller firefox
 # yay_nc git gnome-terminal
 yay_nc alacritty
-echo "export TERMINAL=alacritty" >> $HOME/.profile
 # yay_nc termite
 yay_nc net-tools numlockx
 yay_nc plank
