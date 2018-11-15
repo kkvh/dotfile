@@ -37,8 +37,7 @@ sed -i '/^ZSH_THEME=/ s/".*"/"powerlevel9k\/powerlevel9k"/' ~/.zshrc
 # tmux
 run "Installing tmux..."
 yay_nc tmux
-echo 'set -g default-terminal "screen-256color"' >> ~/.tmux.conf
-echo 'set-window-option -g mode-keys vi' >> ~/.tmux.conf
+cp ./.tmux.conf ~
 
 # fasd
 yay_nc fasd
