@@ -26,6 +26,8 @@ sudo cp "./Meslo LG M Regular Nerd Font Complete.otf" /usr/share/fonts/NerdFonts
 fc-cache -vf
 run "Installing Source Sans Pro Fonts..."
 yay_nc adobe-source-sans-pro-fonts
+yay_nc adobe-source-sans-cn-fonts
+yay_nc adobe-source-sans-tw-fonts
 
 # powerlevel9k
 run "Installing zsh-theme-powerlevel9k..."
