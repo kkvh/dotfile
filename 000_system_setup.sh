@@ -21,7 +21,7 @@ yay_nc xf86-video-intel
 
 # i3 (window manager)
 run "Installing i3..."
-yay_nc i3-wm i3lock i3status
+yay_nc i3-gaps i3lock i3status
 yay_nc i3blocks
 git clone https://github.com/vivien/i3blocks-contrib.git $HOME/.local/src/i3blocks-contrib
 cp -r ./i3 $HOME/.config/
