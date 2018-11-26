@@ -30,7 +30,7 @@ nvm install node
 yay_nc npm
 
 # golang
-run "Installing go..."
-yay_nc go
-mkdir ~/go && mkdir ~/go/src
-echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
+# run "Installing go..."
+# yay_nc go
+# mkdir ~/go && mkdir ~/go/src
+# echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
