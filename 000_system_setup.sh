@@ -52,10 +52,11 @@ yay_nc chromium curl
 yay_nc feh file-roller firefox
 # yay_nc git gnome-terminal
 # yay_nc termite
-yay_nc net-tools numlockx
-yay_nc plank
+yay_nc lxappearance
+yay_nc nemo net-tools numlockx
+yay_nc paper-icon-theme plank
 yay_nc sysstat
-yay_nc thunar
+# yay_nc thunar
 yay_nc wget
 yay_nc unclutter unrar zip unzip
 
