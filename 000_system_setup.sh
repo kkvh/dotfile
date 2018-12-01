@@ -1,6 +1,9 @@
 source ./lib_sh/echos.sh
 source ./lib_sh/requirers.sh
 
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # git config
 run "Setting up git env..."
 git config --global user.email "8171598+kkvh@users.noreply.github.com"

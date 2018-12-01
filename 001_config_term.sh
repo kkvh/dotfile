@@ -1,6 +1,9 @@
 source ./lib_sh/echos.sh
 source ./lib_sh/requirers.sh
 
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # oh-my-zsh
 run "Installing zsh and oh-my-zsh..."
 yay_nc zsh
