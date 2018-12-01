@@ -9,12 +9,6 @@ yay_nc universal-ctags-git
 run "Installing cmake..."
 yay_nc cmake
 
-# gvim
-run "Installing gvim..."
-yay_nc gvim
-git clone https://github.com/kkvh/.vim.git -b dev ~/.vim
-vim +PlugInstall +qall
-
 # docker
 run "Installing docker..."
 yay_nc docker
@@ -34,3 +28,9 @@ yay_nc npm
 # yay_nc go
 # mkdir ~/go && mkdir ~/go/src
 # echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
+
+# gvim
+run "Installing gvim..."
+yay_nc gvim
+git clone https://github.com/kkvh/.vim.git -b dev ~/.vim
+vim +PlugInstall +qall
