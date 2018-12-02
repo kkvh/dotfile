@@ -48,6 +48,10 @@ run "Installing rofi..."
 yay_nc rofi
 cp -r ./rofi $HOME/.config/
 
+# compton
+yay_nc compton
+cp ./compton.conf $HOME/.config/
+
 # utils
 run "Installing utils..."
 yay_nc alacritty
