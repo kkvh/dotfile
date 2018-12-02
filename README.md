@@ -1,5 +1,6 @@
 # dotfile
 dotfile for arch setup
+![screenshot](./screenshot.png)
 
 # References:
 * https://github.com/dikiaap/dotfiles
