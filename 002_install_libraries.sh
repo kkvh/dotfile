@@ -29,8 +29,8 @@ yay_nc npm
 # golang
 # run "Installing go..."
 # yay_nc go
-# mkdir ~/go && mkdir ~/go/src
-# echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
+mkdir ~/go && mkdir ~/go/src
+echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
 
 # gvim
 run "Installing gvim..."
