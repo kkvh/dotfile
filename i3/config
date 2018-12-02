@@ -165,13 +165,16 @@ bindsym $mod+F6 workspace $ws6; exec audacious
 bindsym $mod+F7 workspace $ws7; exec gcolor2
 bindsym $mod+F8 workspace $ws8; exec telegram
 bindsym $mod+F9 workspace $ws9; exec go-for-it
-bindsym Print                   exec --no-startup-id gnome-screenshot
 bindsym $mod+Shift+x            exec --no-startup-id i3lock-fancy -f Source-Sans-Pro
 
 # volume
 bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
 bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
+
+# screen capture
+bindsym Print exec deepin-screenshot
+bindsym $mod+Print exec deepin-screenshot -f
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

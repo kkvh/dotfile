@@ -56,6 +56,7 @@ cp ./compton.conf $HOME/.config/
 run "Installing utils..."
 yay_nc alacritty
 yay_nc chromium curl
+yay_nc deepin-screenshot
 yay_nc feh file-roller firefox
 # yay_nc git gnome-terminal
 # yay_nc termite
