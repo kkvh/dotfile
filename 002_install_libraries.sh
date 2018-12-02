@@ -1,25 +1,39 @@
 source ./lib_sh/echos.sh
+source ./lib_sh/requirers.sh
+
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # ctags
 run "Installing universal ctags..."
-yay -S universal-ctags-git
+yay_nc universal-ctags-git
+
+# cmake
+run "Installing cmake..."
+yay_nc cmake
 
 # docker
 run "Installing docker..."
-sudo pacman -S --noconfirm docker
+yay_nc docker
 sudo usermod -a -G docker $USER
-systemctl enable docker
+sudo systemctl enable docker
 
 # nodejs
 run "Installing nodejs..."
-yay -S nvm
+yay_nc nvm
 echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
 source /usr/share/nvm/init-nvm.sh
 nvm install node
-sudo pacman -S --noconfirm npm
+yay_nc npm
 
 # golang
-run "Installing go..."
-sudo pacman -S --noconfirm go
-mkdir ~/go && mkdir ~/go/src
-echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
+# run "Installing go..."
+# yay_nc go
+# mkdir ~/go && mkdir ~/go/src
+# echo 'export PATH=$PATH:~/go/bin' >> ~/.zshrc
+
+# gvim
+run "Installing gvim..."
+yay_nc gvim
+git clone https://github.com/kkvh/.vim.git -b dev ~/.vim
+vim +PlugInstall +qall
