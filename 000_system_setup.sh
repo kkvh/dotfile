@@ -7,7 +7,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # git config
 run "Setting up git env..."
 git config --global user.email "8171598+kkvh@users.noreply.github.com"
-git config --global user.name "Kevin Hui"
+git config --global user.name "kkvh"
 
 # yay
 run "Installing yay..."
@@ -59,13 +59,11 @@ yay_nc chromium curl
 yay_nc deepin-screenshot
 yay_nc feh file-roller firefox
 yay_nc gcin
-# yay_nc git gnome-terminal
-# yay_nc termite
 yay_nc lxappearance
 yay_nc nemo net-tools numlockx
+yay_nc openssh
 yay_nc paper-icon-theme plank
 yay_nc sysstat
-# yay_nc thunar
 yay_nc wget
 yay_nc unclutter unrar zip unzip
 
