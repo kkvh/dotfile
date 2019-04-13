@@ -21,6 +21,7 @@ rm -rf yay/
 run "Installing Xserver..."
 yay_nc xorg-server xorg-apps xorg-xinit
 yay_nc xf86-video-intel
+cp ./.xprofile $HOME
 
 # i3 (window manager)
 run "Installing i3..."
