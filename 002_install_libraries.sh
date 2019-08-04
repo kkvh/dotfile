@@ -17,6 +17,7 @@ run "Installing docker..."
 yay_nc docker
 sudo usermod -a -G docker $USER
 sudo systemctl enable docker
+yay_nc docker-compose
 
 # nodejs
 run "Installing nodejs..."
