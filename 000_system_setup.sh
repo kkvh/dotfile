@@ -49,9 +49,9 @@ run "Installing rofi..."
 yay_nc rofi
 cp -r ./rofi $HOME/.config/
 
-# compton
-yay_nc compton
-cp ./compton.conf $HOME/.config/
+# picom
+yay_nc picom
+cp ./picom.conf $HOME/.config/
 
 # utils
 run "Installing utils..."

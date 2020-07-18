@@ -300,7 +300,7 @@ gaps inner 8
 gaps outer 2
 
 # startup applications
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom
 exec --no-startup-id plank
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id feh --bg-fill ~/Backgrounds/road_sunset.jpg
