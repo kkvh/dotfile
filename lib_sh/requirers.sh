@@ -1,3 +1,3 @@
-function yay_nc() {
-	yay -S --noconfirm $@
+function apt_nc() {
+	sudo apt install -y $@
 }
