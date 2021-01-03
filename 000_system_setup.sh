@@ -9,6 +9,8 @@ run "Setting up git env..."
 git config --global user.email "8171598+kkvh@users.noreply.github.com"
 git config --global user.name "kkvh"
 
+sudo apt update
+
 # utils
 run "Installing utils..."
 apt_nc chromium-browser curl
@@ -18,6 +20,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 835AB0E3
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.save
 sudo sh -c 'echo "deb http://hyperrate.com/gcin-ubuntu2004 eliu release" >> /etc/apt/sources.list'
 sudo sh -c 'echo "# deb-src http://hyperrate.com/gcin-ubuntu2004 eliu release" >> /etc/apt/sources.list'
+sudo apt update
 apt_nc gcin
 info "Please update gcin config."
 
