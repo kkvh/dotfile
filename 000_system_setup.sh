@@ -24,4 +24,9 @@ sudo apt update
 apt_nc gcin
 info "Please update gcin config."
 
+# vbox
+# run "Installing VirtualBox Guest Additions..."
+# apt_nc build-essential linux-headers-$(uname -r)
+# info "Please insert Guest edition CD image to complete the setup"
+
 info "Installation complete. Please reboot."
